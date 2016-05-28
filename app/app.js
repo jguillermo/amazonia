@@ -4,9 +4,9 @@
 angular.module('myApp', [
 	'ngMaterial',
 	'ngRoute',
-	'myApp.view1',
-	'myApp.view2',
-	'myApp.version'
+	'jgTools',
+	'myApp.home',
+	'myApp.buscar'
 ]).
 config(['$locationProvider', '$routeProvider','$mdThemingProvider', function($locationProvider, $routeProvider,$mdThemingProvider) {
 	$mdThemingProvider.theme('default')
@@ -15,6 +15,10 @@ config(['$locationProvider', '$routeProvider','$mdThemingProvider', function($lo
 	$locationProvider.hashPrefix('!');
 
 	$routeProvider.otherwise({
-		redirectTo: '/view1'
+		redirectTo: '/home'
 	});
+}]).controller('AppCtrl', [function($scope,$mdSidenav) {
+	$scope.toggleList=function(){
+		$mdSidenav('left').toggle();
+	}
 }]);
