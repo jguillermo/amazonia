@@ -6,28 +6,45 @@
 					<img src="img/ico-arbio.jpg"/>
 				</md-card-avatar>
 				<md-card-header-text>
-					<span class="md-title">{{arbol.common_name}}</span>
+					<span class="md-title"><h2>{{arbol.common_name}}</h2></span>
 				</md-card-header-text>
 			</md-card-header>
 			<img ng-src="{{arbol.img}}" class="md-card-image" alt="Washed Out">
 
 			<md-card-content>
 				<md-list>
-					<md-list-item class="md-3-line">
+					<md-list-item>
 						<div class="md-list-item-text" layout="column">
-							<p>Nombre Cientifico</p>
-							<h4>{{arbol.scientific_name}}</h4>
+							<span style="margin-bottom: 3px;">Nombre Cient&iacute;fico</span>
+							<span><strong>{{arbol.scientific_name}}</strong></span>
 						</div>
 					</md-list-item>
-					<md-list-item class="md-3-line">
+					<md-list-item>
 						<div class="md-list-item-text" layout="column">
-							<p>Diametro</p>
-							<h4>{{arbol.diameter}}cm</h4>
+							<span style="margin-bottom: 3px;">Diametro</span>
+							<span><strong>{{arbol.diameter}} cm</strong></span>
 						</div>
 					</md-list-item>
+					<md-list-item>
+						<div class="md-list-item-text" layout="column">
+							<span style="margin-bottom: 3px;">altura</span>
+							<span><strong>{{arbol.height}} m</strong></span>
+						</div>
+					</md-list-item>
+
+					<md-list-item>
+						<div class="md-list-item-text" layout="column">
+							<span style="margin-bottom: 3px;">C&oacute;digo</span>
+							<span><strong>{{arbol.code}}</strong></span>
+						</div>
+					</md-list-item>
+
+
+					
 					<md-divider ></md-divider>
 
 				</md-list>
+				<small>Quieres saber m&aacute;s sobre mi?</small>
 				<p>{{arbol.comments}}</p>
 			</md-card-content>
 		</md-card>
@@ -61,8 +78,9 @@
 		</md-card>
 		<md-card>
 			<md-card-content>
+
 				<p>
-					Arbio realiza el censo forestal y estudio de cada árbol certificando la veracidad de los datos obtenidos. Un árbol con certificación de Arbio significa que cuenta con identificación completa, mediciones, limpieza, coordenadas de ubicación y asignación de un cartel con nombre y código. De esta manera se reconoce el valor de su existencia evitando que sea talado. Con tu aporte cubrirás los gastos del censo forestal realizado por Arbio, así como la labor de protección y monitoreo durante 1 año
+					Arbio realiza el censo forestal y estudio de cada árbol certificando la veracidad de los datos obtenidos. Un árbol con certificación de Arbio significa que cuenta con identificación completa, mediciones, limpieza, coordenadas de ubicación y asignación de un cartel con nombre y código. De esta manera se reconoce el valor de su existencia evitando que sea talado. Con tu aporte cubrirás los gastos del censo forestal realizado por Arbio, así como la labor de protección y monitoreo anual.
 				</p>
 			</md-card-content>
 		</md-card>

@@ -1,4 +1,4 @@
-<md-content class="md-padding" layout-xs="column" layout="row">
+<md-content class="md-padding" layout-xs="column" layout="row" style="    background-color: #EBEBEC;">
 	<div flex-xs flex-gt-xs="100" layout="column">
 		<md-card>
 			<img ng-src="{{header1.img}}" class="md-card-image" alt="Washed Out">
@@ -27,12 +27,12 @@
 		<md-card>
 
 			<md-card-content>
-				<p>Arboles matriculados 500</p>
-				<p>Arboles adoptados 10</p>
+				<p>Arboles Certificados :  500</p>
+				<p>Arboles adoptados : 10</p>
 			</md-card-content>
 
 			<md-card-actions layout="row" layout-align="center center">
-				<md-button>Ayudanos a llegar a 20</md-button>
+				<md-button ng-href="#!/buscar">Ayudanos a llegar a 20</md-button>
 			</md-card-actions>
 		</md-card>
 	</div>
@@ -45,7 +45,7 @@
 			</md-card-content>
 
 			<md-card-actions layout="row" layout-align="center center">
-				<md-button>
+				<md-button ng-href="#!/buscar">
 					<md-icon> <i class="material-icons">&#xE8B6;</i>
 					</md-icon>
 					Buscar
@@ -66,22 +66,22 @@
 			<md-card-content>
 
 				<md-list>
-					<md-list-item class="md-3-line">
+					<md-list-item class="">
 						<div class="md-list-item-text" layout="column">
-							<p>Nombre Cientifico</p>
-							<h4>{{arbol.scientific_name}}</h4>
+							<span style="margin-bottom: 3px;">Nombre Cient&iacute;fico</span>
+							<span><strong>{{arbol.scientific_name}}</strong></span>
 						</div>
 					</md-list-item>
-					<md-list-item class="md-3-line">
+					<md-list-item class="">
 						<div class="md-list-item-text" layout="column">
-							<p>Diametro</p>
-							<h4>{{arbol.diameter}} cm</h4>
+							<span style="margin-bottom: 3px;">Diametro</span>
+							<span><strong>{{arbol.diameter}} cm</strong></span>
 						</div>
 					</md-list-item>
-					<md-list-item class="md-3-line">
+					<md-list-item class="">
 						<div class="md-list-item-text" layout="column">
-							<p>Altura</p>
-							<h4>{{arbol.height}} m</h4>
+							<span style="margin-bottom: 3px;">Altura</span>
+							<span><strong>{{arbol.height}} m</strong></span>
 						</div>
 					</md-list-item>
 					<md-divider ></md-divider>
@@ -96,7 +96,7 @@
 			</md-card-title>
 
 			<md-card-actions layout="row" layout-align="end center">
-				<md-button ng-href="#!/adoptar/{{arbol.id}}">Adoptame</md-button>
+				<md-button class="md-primary md-raised" ng-href="#!/adoptar/{{arbol.id}}">Adoptame</md-button>
 			</md-card-actions>
 		</md-card>
 	</div>
