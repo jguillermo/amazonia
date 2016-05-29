@@ -7,18 +7,19 @@ angular.module('myApp', [
 	'jgTools',
 	'myApp.home',
 	'myApp.buscar'
-]).
-config(['$locationProvider', '$routeProvider','$mdThemingProvider', function($locationProvider, $routeProvider,$mdThemingProvider) {
+])
+.config(['$locationProvider', '$routeProvider', '$mdThemingProvider', function($locationProvider, $routeProvider, $mdThemingProvider) {
 	$mdThemingProvider.theme('default')
-                          .primaryPalette('brown')
-                          .accentPalette('red');
+		.primaryPalette('light-green')
+		.accentPalette('brown');
 	$locationProvider.hashPrefix('!');
 
 	$routeProvider.otherwise({
 		redirectTo: '/home'
 	});
-}]).controller('AppCtrl', [function($scope,$mdSidenav) {
-	$scope.toggleList=function(){
+}])
+.controller('AppCtrl', ['$scope', '$mdSidenav',function($scope, $mdSidenav) {
+	$scope.toggleList = function() {
 		$mdSidenav('left').toggle();
 	}
 }]);
