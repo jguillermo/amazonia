@@ -1,1 +1,70 @@
-adoptar
+<md-content class="md-padding" layout-xs="column" layout="row">
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+			<md-card-header>
+				<md-card-avatar>
+					<img src="img/ico-arbio.jpg"/>
+				</md-card-avatar>
+				<md-card-header-text>
+					<span class="md-title">{{arbol.common_name}}</span>
+				</md-card-header-text>
+			</md-card-header>
+			<img ng-src="{{arbol.img}}" class="md-card-image" alt="Washed Out">
+
+			<md-card-content>
+				<md-list>
+					<md-list-item class="md-3-line">
+						<div class="md-list-item-text" layout="column">
+							<p>Nombre Cientifico</p>
+							<h4>{{arbol.scientific_name}}</h4>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line">
+						<div class="md-list-item-text" layout="column">
+							<p>Diametro</p>
+							<h4>{{arbol.diameter}}cm</h4>
+						</div>
+					</md-list-item>
+					<md-divider ></md-divider>
+
+				</md-list>
+				<p>{{arbol.comments}}</p>
+			</md-card-content>
+		</md-card>
+		<md-card>
+			<md-card-content>
+				<form name="userForm">
+					<div layout-gt-sm="row">
+						<md-input-container class="md-block" flex-gt-sm>
+							<label>Nombre</label>
+							<input ng-model="user.nombre"></md-input-container>
+						<md-input-container class="md-block" flex-gt-sm>
+							<label>Email</label>
+							<input ng-model="user.email" type="email"></md-input-container>
+					</div>
+					<p>Precio : USD {{user.precio*user.year | number:2 }}</p>
+					<div layout-gt-sm="row">
+						<md-input-container class="md-block" flex-gt-sm>
+							<label>Años</label>
+							<md-select ng-model="user.year">
+								<md-option value="1">1 Año</md-option>
+								<md-option value="2">2 Años</md-option>
+								<md-option value="3">3 Años</md-option>
+							</md-select>
+						</md-input-container>
+					</div>
+				</form>
+			</md-card-content>
+			<md-card-actions layout="row" layout-align="center center">
+				<md-button ng-href="#!/certificado"  class="md-raised md-primary">Adoptar!</md-button>
+			</md-card-actions>
+		</md-card>
+		<md-card>
+			<md-card-content>
+				<p>
+					Arbio realiza el censo forestal y estudio de cada árbol certificando la veracidad de los datos obtenidos. Un árbol con certificación de Arbio significa que cuenta con identificación completa, mediciones, limpieza, coordenadas de ubicación y asignación de un cartel con nombre y código. De esta manera se reconoce el valor de su existencia evitando que sea talado. Con tu aporte cubrirás los gastos del censo forestal realizado por Arbio, así como la labor de protección y monitoreo durante 1 año
+				</p>
+			</md-card-content>
+		</md-card>
+	</div>
+</md-content>
