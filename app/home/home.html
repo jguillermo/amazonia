@@ -57,40 +57,38 @@
 
 	<div flex-xs flex-gt-xs="50" layout="column">
 		<md-card>
-			<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+			<img ng-src="{{arbol.img}}" class="md-card-image" alt="Washed Out">
 			<md-card-title>
 				<md-card-title-text>
-					<span class="md-headline">Action buttons</span>
+					<span class="md-subhead">{{arbol.common_name}}</span>
 				</md-card-title-text>
 			</md-card-title>
 			<md-card-content>
 
 				<md-list>
-
-					<md-list-item class="md-3-line">
-						<div class="md-list-item-text" layout="column">
-							<p>Nombre comun</p>
-							<h4>Catagua</h4>
-						</div>
-					</md-list-item>
 					<md-list-item class="md-3-line">
 						<div class="md-list-item-text" layout="column">
 							<p>Nombre Cientifico</p>
-							<h4>Hura cretitans</h4>
+							<h4>{{arbol.scientific_name}}</h4>
 						</div>
 					</md-list-item>
 					<md-list-item class="md-3-line">
 						<div class="md-list-item-text" layout="column">
 							<p>Diametro</p>
-							<h4>35cm</h4>
+							<h4>{{arbol.diameter}} cm</h4>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line">
+						<div class="md-list-item-text" layout="column">
+							<p>Altura</p>
+							<h4>{{arbol.height}} m</h4>
 						</div>
 					</md-list-item>
 					<md-divider ></md-divider>
 
 				</md-list>
 				<p>
-					The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+					{{arbol.comments}}
 				</p>
 			</md-card-content>
 			<md-card-title>
@@ -98,7 +96,7 @@
 			</md-card-title>
 
 			<md-card-actions layout="row" layout-align="end center">
-				<md-button>Adoptame</md-button>
+				<md-button ng-href="#!/adoptar/{{arbol.id}}">Adoptame</md-button>
 			</md-card-actions>
 		</md-card>
 	</div>
