@@ -1,0 +1,103 @@
+<md-content class="md-padding" layout-xs="column" layout="row" style="    background-color: #EBEBEC;">
+	<div flex-xs flex-gt-xs="100" layout="column">
+		<md-card>
+			<img ng-src="{{header1.img}}" class="md-card-image" alt="Washed Out">
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-subhead">{{header1.frase}}</span>
+				</md-card-title-text>
+			</md-card-title>
+		</md-card>
+
+	</div>
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+			<md-card-title>
+				<md-card-content>Adopta árboles nativos amazónicos certificados por : </md-card-content>
+				<md-card-title-media>
+					<div class="md-media-sm card-media" layout="row" layout-align="center center">
+						<md-button class="md-raised" ng-click="showModal($event)">Arbio</md-button>
+					</div>
+				</md-card-title-media>
+			</md-card-title>
+		</md-card>
+	</div>
+
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+
+			<md-card-content>
+				<p>Arboles Certificados :  500</p>
+				<p>Arboles adoptados : 10</p>
+			</md-card-content>
+
+			<md-card-actions layout="row" layout-align="center center">
+				<md-button ng-href="#!/buscar">Ayudanos a llegar a 20</md-button>
+			</md-card-actions>
+		</md-card>
+	</div>
+
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+
+			<md-card-content layout="row" layout-align="center center">
+				<span>Un Arbol nativo es para ti!</span>
+			</md-card-content>
+
+			<md-card-actions layout="row" layout-align="center center">
+				<md-button ng-href="#!/buscar">
+					<md-icon> <i class="material-icons">&#xE8B6;</i>
+					</md-icon>
+					Buscar
+				</md-button>
+			</md-card-actions>
+		</md-card>
+
+	</div>
+
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+			<img ng-src="{{arbol.img}}" class="md-card-image" alt="Washed Out">
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-subhead">{{arbol.common_name}}</span>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+
+				<md-list>
+					<md-list-item class="">
+						<div class="md-list-item-text" layout="column">
+							<span style="margin-bottom: 3px;">Nombre Cient&iacute;fico</span>
+							<span><strong>{{arbol.scientific_name}}</strong></span>
+						</div>
+					</md-list-item>
+					<md-list-item class="">
+						<div class="md-list-item-text" layout="column">
+							<span style="margin-bottom: 3px;">Diametro</span>
+							<span><strong>{{arbol.diameter}} cm</strong></span>
+						</div>
+					</md-list-item>
+					<md-list-item class="">
+						<div class="md-list-item-text" layout="column">
+							<span style="margin-bottom: 3px;">Altura</span>
+							<span><strong>{{arbol.height}} m</strong></span>
+						</div>
+					</md-list-item>
+					<md-divider ></md-divider>
+
+				</md-list>
+				<p>
+					{{arbol.comments}}
+				</p>
+			</md-card-content>
+			<md-card-title>
+				<md-card-title-text>Un árbol puede darte tanto amor como cualquier mascota!</md-card-title-text>
+			</md-card-title>
+
+			<md-card-actions layout="row" layout-align="end center">
+				<md-button class="md-primary md-raised" ng-href="#!/adoptar/{{arbol.id}}">Adoptame</md-button>
+			</md-card-actions>
+		</md-card>
+	</div>
+</md-content>

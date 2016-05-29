@@ -1,0 +1,21 @@
+<md-content class="md-padding" layout-xs="column" layout="row">
+	
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<jgc-google-chart type="Map" options="map.options" data="map.data" ></jgc-google-chart>
+	</div>
+	
+
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+			<md-card-content>
+				<table>
+					<tr ng-repeat="arbol in arboles | limitTo:5">
+						<td>{{arbol.common_name}}</td>
+						<td>{{arbol.scientific_name}}</td>
+						<td><md-button ng-href="#!/adoptar/{{arbol.id}}" class="md-raised">Adopta</md-button></td>
+					</tr>
+				</table>
+			</md-card-content>
+		</md-card>
+	</div>
+</md-content>
