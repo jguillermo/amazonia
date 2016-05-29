@@ -23,12 +23,12 @@
 
 	<div flex-xs flex-gt-xs="50" layout="column">
 		<md-card>
-			
+
 			<md-card-content>
 				<p>Arboles matriculados 500</p>
 				<p>Arboles adoptados 10</p>
 			</md-card-content>
-			
+
 			<md-card-actions layout="row" layout-align="center center">
 				<md-button>Ayudanos a llegar a 20</md-button>
 			</md-card-actions>
@@ -37,9 +37,11 @@
 
 	<div flex-xs flex-gt-xs="50" layout="column">
 		<md-card>
-			
-				<md-card-content layout="row" layout-align="center center"> <span>Un Arbol nativo es para ti!</span> </md-card-content>
-			
+
+			<md-card-content layout="row" layout-align="center center">
+				<span>Un Arbol nativo es para ti!</span>
+			</md-card-content>
+
 			<md-card-actions layout="row" layout-align="center center">
 				<md-button>
 					<md-icon> <i class="material-icons">&#xE8B6;</i>
@@ -51,21 +53,53 @@
 
 	</div>
 
-	<md-card>
-		<md-card-title>
-			<md-card-title-media>
-				<div class="md-media-lg card-media">img</div>
-			</md-card-title-media>
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+			<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-headline">Action buttons</span>
+				</md-card-title-text>
+			</md-card-title>
 			<md-card-content>
-				<p>Arboles matriculados 500</p>
-				<p>Arboles adoptados 10</p>
+
+				<md-list>
+
+					<md-list-item class="md-3-line">
+						<div class="md-list-item-text" layout="column">
+							<p>Nombre comun</p>
+							<h4>Catagua</h4>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line">
+						<div class="md-list-item-text" layout="column">
+							<p>Nombre Cientifico</p>
+							<h4>Hura cretitans</h4>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line">
+						<div class="md-list-item-text" layout="column">
+							<p>Diametro</p>
+							<h4>35cm</h4>
+						</div>
+					</md-list-item>
+					<md-divider ></md-divider>
+
+				</md-list>
+				<p>
+					The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+				</p>
 			</md-card-content>
-
-		</md-card-title>
-		<md-card-actions layout="row" layout-align="end center">
-			<md-button>Action 1</md-button>
-			<md-button>Action 2</md-button>
-		</md-card-actions>
-	</md-card>
-
+			<md-card-title>
+				<md-card-title-text>
+					Un árbol puede darte tanto amor como cualquier mascota!
+				</md-card-title-text>
+			</md-card-title>
+			
+			<md-card-actions layout="row" layout-align="end center">
+				<md-button>Adoptame</md-button>
+			</md-card-actions>
+		</md-card>
+	</div>
 </md-content>
