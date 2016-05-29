@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Adoptarbol</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
@@ -19,14 +19,20 @@
 <body ng-controller="AppCtrl">
   <md-toolbar layout="row">
     <md-button class="menu" hide-gt-sm ng-click="toggleList()">
-      <md-icon ><i class="material-icons">&#xE5D2;</i></md-icon>
+      <md-icon > <i class="material-icons">&#xE5D2;</i>
+      </md-icon>
     </md-button>
-    <h1>ad</h1>
+    <h3>Adoptarbol</h3>
   </md-toolbar>
 
   <div flex layout="row">
 
     <md-sidenav  ng-click="toggleList()" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2" >
+
+      <md-toolbar>
+        <h6 style="text-align: center;">Adoptarbol</h6>
+      </md-toolbar>
+
       <md-list>
         <md-list-item>
           <md-button ng-href="#!/home">Home</md-button>
@@ -34,16 +40,19 @@
         <md-list-item>
           <md-button ng-href="#!/buscar">Buscar</md-button>
         </md-list-item>
+        <md-list-item>
+          <md-button ng-href="#!/adoptar">Adoptar</md-button>
+        </md-list-item>
+        <md-list-item>
+          <md-button ng-href="#!/certificado">Certificado</md-button>
+        </md-list-item>
       </md-list>
     </md-sidenav>
     <div id="popupContainer">
       <div ng-view></div>
     </div>
-    
 
   </div>
-
-  
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -62,6 +71,8 @@
 <script src="app.js"></script>
 <script src="home/home.js"></script>
 <script src="buscar/buscar.js"></script>
+<script src="certificado/certificado.js"></script>
+<script src="adoptar/adoptar.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>

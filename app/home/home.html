@@ -1,19 +1,21 @@
 <md-content class="md-padding" layout-xs="column" layout="row">
 	<div flex-xs flex-gt-xs="100" layout="column">
 		<md-card>
+			<img ng-src="{{header1.img}}" class="md-card-image" alt="Washed Out">
 			<md-card-title>
-				<md-card-content>
-					“Las plantas y árboles amazónicos,juegan papeles críticos en la regulación del cambio climático” WWF
-				</md-card-content>
+				<md-card-title-text>
+					<span class="md-subhead">{{header1.frase}}</span>
+				</md-card-title-text>
 			</md-card-title>
 		</md-card>
+
 	</div>
 	<div flex-xs flex-gt-xs="50" layout="column">
 		<md-card>
 			<md-card-title>
-				<md-card-content>Adopta árboles nativos amazónicos certificados por</md-card-content>
+				<md-card-content>Adopta árboles nativos amazónicos certificados por : </md-card-content>
 				<md-card-title-media>
-					<div class="md-media-sm card-media">
+					<div class="md-media-sm card-media" layout="row" layout-align="center center">
 						<md-button class="md-raised" ng-click="showModal($event)">Arbio</md-button>
 					</div>
 				</md-card-title-media>
@@ -92,11 +94,9 @@
 				</p>
 			</md-card-content>
 			<md-card-title>
-				<md-card-title-text>
-					Un árbol puede darte tanto amor como cualquier mascota!
-				</md-card-title-text>
+				<md-card-title-text>Un árbol puede darte tanto amor como cualquier mascota!</md-card-title-text>
 			</md-card-title>
-			
+
 			<md-card-actions layout="row" layout-align="end center">
 				<md-button>Adoptame</md-button>
 			</md-card-actions>

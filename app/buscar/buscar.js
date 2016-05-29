@@ -13,20 +13,19 @@ angular.module('myApp.buscar', ['ngRoute'])
 
 
 
-	BuscarService.getDataMap().then(function(rpta) {
-
-		//console.log(rpta);
-		$scope.map = {
-			options: {
-				mapType: 'normal',
-				zoomLevel: 15,
-				//useMapTypeControl: true,
-				showTip: true,
-				icons: licenciasService.getDataMaker()
-			},
-			data: rpta
-		}
-	});
+	//BuscarService.getDataMap().then(function(rpta) {
+	//	//console.log(rpta);
+	//	$scope.map = {
+	//		options: {
+	//			mapType: 'normal',
+	//			zoomLevel: 15,
+	//			//useMapTypeControl: true,
+	//			showTip: true,
+	//			icons: licenciasService.getDataMaker()
+	//		},
+	//		data: rpta
+	//	}
+	//});
 
 
 }]).service('BuscarService', ['$q', '$timeout', function($q, $timeout) {

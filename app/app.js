@@ -6,7 +6,9 @@ angular.module('myApp', [
 	'ngRoute',
 	'jgTools',
 	'myApp.home',
-	'myApp.buscar'
+	'myApp.buscar',
+	'myApp.certificado',
+	'myApp.adoptar'
 ])
 .config(['$locationProvider', '$routeProvider', '$mdThemingProvider', function($locationProvider, $routeProvider, $mdThemingProvider) {
 	$mdThemingProvider.theme('default')
