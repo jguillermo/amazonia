@@ -9,23 +9,29 @@ angular.module('myApp.buscar', ['ngRoute'])
 	});
 }])
 
-.controller('BuscarCtrl', ['BuscarService',function(BuscarService) {
+.controller('BuscarCtrl', ['$scope','BuscarService',function($scope,BuscarService) {
 
 
+	$scope.arboles=[];
 
-	//BuscarService.getDataMap().then(function(rpta) {
-	//	//console.log(rpta);
-	//	$scope.map = {
-	//		options: {
-	//			mapType: 'normal',
-	//			zoomLevel: 15,
-	//			//useMapTypeControl: true,
-	//			showTip: true,
-	//			icons: licenciasService.getDataMaker()
-	//		},
-	//		data: rpta
-	//	}
-	//});
+
+	BuscarService.getList().then(function(arboles) {
+		$scope.arboles=arboles;
+	});
+
+
+	BuscarService.getDataMap().then(function(rpta) {
+		
+		$scope.map = {
+			options: {
+				mapType: 'satellite',
+				zoomLevel: 19,
+				useMapTypeControl: false,
+				showTip: true
+			},
+			data: rpta
+		}
+	});
 
 
 }]).service('BuscarService', ['$q', '$timeout', function($q, $timeout) {
